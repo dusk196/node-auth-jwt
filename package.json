@@ -5,9 +5,10 @@
   "main": "app.js",
   "scripts": {
     "start": "node ./bin/www",
+    "db:init": "sequelize db:create && sequelize db:migrate && sequelize db:seed:all",
     "db:create": "sequelize db:create",
-    "db:undo": "sequelize db:migrate:undo",
     "db:migrate": "sequelize db:migrate",
+    "db:migrate:undo": "sequelize db:migrate:undo",
     "db:migration:g": "sequelize migration:generate --name",
     "db:seed": "sequelize db:seed:all",
     "db:seed:g": "sequelize seed:generate --name"
