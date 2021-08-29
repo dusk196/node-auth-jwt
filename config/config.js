@@ -10,7 +10,7 @@ module.exports = {
     host: DB_HOST,
     dialect: "mysql",
     dialectOptions: {
-      useUTC: false,
+      timezone: 'Z',
       dateStrings: true,
       typeCast: true
     },
@@ -23,7 +23,7 @@ module.exports = {
     host: DB_PASSWORD,
     dialect: "mysql",
     dialectOptions: {
-      useUTC: false,
+      timezone: 'Z',
       dateStrings: true,
       typeCast: true
     },
