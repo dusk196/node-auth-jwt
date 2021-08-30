@@ -1,5 +1,7 @@
 const { Model } = require('sequelize');
+
 module.exports = (sequelize, DataTypes) => {
+
   class Role extends Model {
     static associate(models) {
       Role.belongsToMany(models.User, {
@@ -9,6 +11,7 @@ module.exports = (sequelize, DataTypes) => {
       });
     }
   }
+
   Role.init({
     roleId: DataTypes.STRING,
     name: DataTypes.STRING
@@ -16,5 +19,7 @@ module.exports = (sequelize, DataTypes) => {
     sequelize,
     modelName: 'Role'
   });
+
   return Role;
+
 };
