@@ -4,7 +4,8 @@
   "description": "A simple application with some REST APIs to perform authentication with JWT",
   "main": "app.js",
   "scripts": {
-    "start": "node ./bin/www",
+    "start": "sequelize db:create && sequelize db:migrate && sequelize db:seed:all && node ./bin/www",
+    "watch": "nodemon ./bin/www",
     "db:init": "sequelize db:create && sequelize db:migrate && sequelize db:seed:all",
     "db:create": "sequelize db:create",
     "db:migrate": "sequelize db:migrate",
@@ -43,6 +44,7 @@
   },
   "homepage": "https://github.com/dusk196/node-auth-jwt#readme",
   "devDependencies": {
+    "nodemon": "^2.0.12",
     "sequelize-cli": "^6.2.0"
   }
 }
